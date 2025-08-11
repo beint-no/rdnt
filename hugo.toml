@@ -1,0 +1,29 @@
+# Basic Configuration
+baseURL = "https://rdnt.no/"
+languageCode = "nb-NO"
+title = "RDNT"
+
+# Core SEO switches
+enableRobotsTXT = true
+
+# Required Module Configuration
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.148.2"
+
+# Use Git/file times for <lastmod> in pages and sitemap
+enableGitInfo = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true # Allow raw HTML, important for JSON-LD etc.
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
+
+
+[minify]
+  minifyOutput = true

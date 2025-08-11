@@ -1,0 +1,115 @@
+{{ define "main" }}
+<article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <header class="mb-12 text-center">
+        <div class="mb-6">
+            {{ range .Params.categories }}
+                <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" 
+                   class="inline-block px-4 py-1 text-sm font-medium text-primary-600 bg-primary-50 rounded-full hover:bg-primary-100">
+                    {{ . }}
+                </a>
+            {{ end }}
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{{ .Title }}</h1>
+        
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-gray-600 mb-8">
+            {{ if .Params.author }}
+            <div class="flex items-center">
+                {{ with .Site.GetPage .Params.author }}
+                    <img src="{{ .Params.avatar | default "/images/avatar-placeholder.png" }}" 
+                         alt="{{ .Title }}" 
+                         class="w-10 h-10 rounded-full mr-3">
+                    <span class="font-medium">{{ .Title }}</span>
+                {{ end }}
+            </div>
+            <span class="hidden sm:block">•</span>
+            {{ end }}
+            <time datetime="{{ .Date.Format "2006-01-02" }}" class="flex items-center">
+                <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                {{ .Date.Format "January 2, 2006" }}
+            </time>
+            <span class="hidden sm:block">•</span>
+            <div class="flex items-center">
+                <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                {{ .ReadingTime }} min read
+            </div>
+        </div>
+
+        {{ with .Params.featured_image }}
+            <div class="rounded-xl overflow-hidden mb-12 shadow-lg">
+                <img 
+                    src="{{ . | relURL }}" 
+                    alt="{{ $.Title }}" 
+                    class="w-full h-auto max-h-[500px] object-cover"
+                    loading="eager"
+                >
+            </div>
+        {{ end }}
+    </header>
+
+    <div class='{{ if eq .Section "blogs" }}article-content {{ end }}prose prose-lg max-w-none prose-headings:font-medium prose-a:text-primary-600 hover:prose-a:text-primary-700 prose-blockquote:border-l-4 prose-blockquote:border-primary-600 prose-blockquote:bg-gray-50 prose-blockquote:px-6 prose-blockquote:py-3 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-md'>
+        {{ .Content }}
+    </div>
+
+
+    {{ with .Params.tags }}
+        <footer class="mt-16 pt-8 border-t border-gray-200">
+            <div class="mb-8">
+                <h3 class="text-sm font-medium text-gray-900 mb-4">Tags</h3>
+                <div class="flex flex-wrap gap-2">
+                    {{ range . }}
+                        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" 
+                           class="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-gray-200 transition-colors">
+                            #{{ . }}
+                        </a>
+                    {{ end }}
+                </div>
+            </div>
+        </footer>
+    {{ end }}
+</article>
+
+
+
+<!-- Related Posts -->
+{{ $related := .Site.RegularPages.Related . | first 3 }}
+{{ with $related }}
+    <div class="bg-gray-50 py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">You might also like</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {{ range . }}
+                    <article class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100">
+                        {{ with .Params.featured_image }}
+                            <div class="aspect-w-16 aspect-h-9 overflow-hidden">
+                                <img 
+                                    src="{{ . | relURL }}" 
+                                    alt="{{ $.Title }}" 
+                                    class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                    loading="lazy"
+                                >
+                            </div>
+                        {{ end }}
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 hover:text-primary-600 transition-colors">
+                                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-4 line-clamp-2">{{ .Summary | plainify | safeHTML | truncate 120 }}</p>
+                            <a href="{{ .RelPermalink }}" class="text-primary-600 hover:text-primary-700 text-sm font-medium inline-flex items-center">
+                                Read more
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+{{ end }}
+
+{{ end }}

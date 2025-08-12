@@ -82,8 +82,7 @@ Hva hvis jeg stryker?
 
 Klar for å ta teorien? Start i dag – det tar under ett minutt å komme i gang.
 
-- Gå til prisoversikten: [/pricing](/pricing)
-- Last ned appen: [iPhone](/pages/iphone-app) · [Android](/pages/android-app)
-- Spørsmål? [Kontakt oss](/contact)
+- Gå til [prisoversikten](https://eteo.no/pricing)
+- Last ned appen: [iPhone](https://eteo.no/pages/iphone-app) · [Android](https://eteo.no/pages/android-app)
 
 Lykke til – du klarer dette med Eteo! 📚🚗

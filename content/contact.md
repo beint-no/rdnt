@@ -1,7 +1,7 @@
 ---
 title: "Kontakt oss"
-meta_title: "Kontakt Eteo | Hjelp til å bestå teoriprøven for bil"
-description: "Trenger du hjelp til å bestå teoriprøven for bil klasse B, da er det bare å kontakte oss! Send mail og få svar samme dag."
+meta_title: "Kontakt RDNT"
+description: "Ta kontakt med RDNT. Vi jobber for å gjøre mer kunnskap tilgjengelig gratis eller rimeligere."
 layout: "contact-page"
 type: "page"
 ---

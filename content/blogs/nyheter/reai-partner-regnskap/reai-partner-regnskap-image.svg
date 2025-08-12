@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="ReAI partner regnskap – RDNT nyheter">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <g opacity="0.25">
+    <circle cx="200" cy="120" r="180" fill="#ffffff"/>
+    <circle cx="1040" cy="520" r="220" fill="#ffffff"/>
+  </g>
+  <rect x="40" y="40" width="1120" height="550" rx="24" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.25)"/>
+  <rect x="40" y="40" width="1120" height="140" rx="24" fill="url(#glow)"/>
+  <g transform="translate(100,160)">
+    <text x="0" y="0" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="700" fill="#ffffff">ReAI.no</text>
+    <text x="0" y="54" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500" fill="#e0e7ff">Partner for smart, automatisert regnskap</text>
+  </g>
+  <g transform="translate(100,310)" fill="#ffffff">
+    <g opacity="0.95">
+      <circle cx="28" cy="28" r="28" fill="rgba(255,255,255,0.15)"/>
+      <path d="M28 16v24m12-12H16" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="72" y="36" font-family="Inter, system-ui" font-size="26" font-weight="600">Automatiser bilag, faktura og MVA</text>
+  </g>
+  <g transform="translate(100,380)" fill="#ffffff">
+    <g opacity="0.95">
+      <circle cx="28" cy="28" r="28" fill="rgba(255,255,255,0.15)"/>
+      <path d="M18 34l8 8 16-20" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="72" y="36" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="600">AI‑drevet innsikt og rapportering</text>
+  </g>
+  <g transform="translate(100,450)" fill="#ffffff">
+    <g opacity="0.95">
+      <circle cx="28" cy="28" r="28" fill="rgba(255,255,255,0.15)"/>
+      <path d="M16 28h24M28 16v24" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="72" y="36" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="600">Sømløs integrasjon med dine verktøy</text>
+  </g>
+  <text x="100" y="560" font-family="Inter, Arial, sans-serif" font-size="22" fill="#e2e8f0">Les mer på reai.no</text>
+</svg>

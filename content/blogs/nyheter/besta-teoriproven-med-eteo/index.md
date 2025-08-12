@@ -10,7 +10,7 @@ tags: ["teoriprøven", "førerkort", "Eteo", "øvelser", "beståttgaranti"]
 
 ## Introduksjon
 
-Å bestå teoriprøven trenger ikke være vanskelig. Med Eteo lærer du akkurat det du trenger – på en måte som hjernen din faktisk husker. I denne guiden viser vi deg hvordan du kan bruke Eteo til å bestå på første forsøk, hva som skiller oss fra tradisjonelle teorinettsteder, og hvordan beståttgarantien fungerer.
+Å bestå teoriprøven trenger ikke være vanskelig. Med [Eteo](https://eteo.no) lærer du akkurat det du trenger – på en måte som hjernen din faktisk husker. I denne guiden viser vi deg hvordan du kan bruke Eteo til å bestå på første forsøk, hva som skiller oss fra tradisjonelle teorinettsteder, og hvordan beståttgarantien fungerer.
 
 <!--more-->
 
